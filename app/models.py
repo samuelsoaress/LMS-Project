@@ -24,7 +24,7 @@ class UsuarioManager(BaseUserManager):
 
 
 class Usuario(AbstractBaseUser):
-      nome = models.CharField(max_length=50)
+      nome = models.CharField(max_length=60)
       ra = models.IntegerField(unique=True)
       perfil = models.CharField(max_length=1, default='C')
       ativo = models.BooleanField(default=True)
@@ -73,7 +73,7 @@ class Periodo(models.Model):
     gradecurricular = models.ForeignKey(GradeCurricular)
 
 class Disciplina(models.Model):
-    nome = models.CharField(max_length=240)
+    nome = models.CharField(max_length=250)
     carga_horaria = models.IntegerField("Carga_Horaria")
     teoria = models.DecimalField(max_digits=3, decimal_places=1)
     pratica = models.DecimalField(max_digits=3, decimal_places=1)
@@ -104,7 +104,7 @@ class Aluno(Usuario):
     )
 
 class Professor(Usuario):
-    apelido = models.CharField(unique=True,max_length=30)
+    apelido = models.CharField(unique=True,max_length=50)
       
 class Turma(models.Model):
     turma = models.CharField(max_length=15)
@@ -141,7 +141,7 @@ class Resposta(models.Model):
     questao = models.ForeignKey(Questao)
     aluno = models.ForeignKey(Aluno)
     data_avaliacao = models.DateField(auto_now=False, auto_now_add=False)
-    nota = models.DecimalField(max_digits=4, decimal_places=2)
+    nota = models.DecimalField(max_digits=5, decimal_places=2)
     avaliacao = models.TextField(blank=True)
     descricao = models.TextField(blank=True)
     data_de_envio = models.DateField(auto_now=False, auto_now_add=False)
