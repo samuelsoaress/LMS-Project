@@ -7,7 +7,7 @@ class ContatoForm(forms.Form):
     nome = forms.CharField(label="nome", required=True )
     email = forms.EmailField(label="email")
     telefone = forms.NumberInput()
-    ra = forms.NumberInput()
+    ra = forms.NumberInput(null=False)
     assunto = forms.CharField(label="assunto", required=True)
     mensagem = forms.CharField(label="mensagem", required="true")
     
