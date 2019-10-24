@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block conteudo %}
+{%load static%}
+<script>
+function MudarResultado() {
+    var display = document.getElementById('aparecer').style.display;
+    if (display == "none"){
+        document.getElementById('aparecer').style.display = 'block';
+        document.getElementById('sumir').style.display = 'none';
+    }
+}
+
+</script>
+<br/><br/><br/><br/>
+<div id="inscricao">  
+    <h1>ENCAMINHAR UM EMAIL</h1><br/>
+    <h4>Realize sua inscrição para ter acesso a Prova Online de Admissão!</h4><br/><br/>
+    <form method="post" action="#" id="dados">
+        <label for="idnome">Nome:</label><input type="text" id="idnome" name="Nome" id="dados"/><br/><br/>
+        <label for="email">Email:</label><input type="text" id="idemail" name="email" id="dados"/><br/><br/>
+        <label for="telefone">Telefone:</label><input type="text" id="idtelefone" name="telefone" id="dados"/><br/><br/>
+        <label for="ra">Ra:</label><input type="text" id="idra" name="ra"/><br/><br/>
+    <select>
+        <option value="0">Selecione um curso</option>
+        <option value='#'>ADMINISTRAÇÃO</option>
+        <option value='#'>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</option>
+        <option value='#'>BANCO DE DADOS</option>
+        <option value='#'>GESTÃO DA TECNOLOGIA DA INFORMAÇÃO</option>
+        <option value='#'>JOGOS DIGITAIS</option>
+        <option value='#'>PROCESSOS GERENCIAIS</option>
+        <option value='#'>PRODUÇÃO MULTIMÍDIA</option>
+        <option value='#'>REDES DE COMPUTADORES</option>
+        <option value='#'>SISTEMAS DE INFORMAÇÃO</option>
+    </select><br/><br/>
+    <button button type="button" onclick="MudarResultado()">INSCREVER</button><br/>
+    </form>
+</div><br/>
+<br/>
+{% endblock %}

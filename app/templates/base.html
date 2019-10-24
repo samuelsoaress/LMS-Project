@@ -1,0 +1,73 @@
+<html lang = "pt-br">
+<head>
+	<meta charset = "utf-8">
+	<title>Tecvolution</title>
+	{% load static %}
+	<link rel="shortcut icon" href="{% static '..\static\#' %} " type="image/jpg" style="width:100%"/>
+	<link rel="stylesheet" type="text/css"  href="{% static '..\static\css1.css' %}"/>
+	</head>
+<body>
+<h1 id="titulo" style="margin: 10px 20px;">TECVOLUTION</h1>
+<script>
+	function validaCmp() {
+		var user = document.getElementById("id_username").value;
+		var pass = document.getElementById("id_password").value;
+		if (user == "" || user == null){ alert("Usuário inválido!") }
+		if (pass == "" || pass == null){ alert("Senha inválida!") } }
+</script>
+	
+<nav id="menu">
+    <ul>
+        <br/><br/><br/><br/>
+        <li><a href="index.html">A FACULDADE</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+        <li><a href="cursos.html">CURSOS</a><ul>
+            <a href="cursos.html"><li>GRADUAÇÃO</li></a>
+            <a href="cursos.html"><li>PÓS-GRADUAÇÃO</li></a></ul></li>
+	</ul>
+</nav><br/><br/><br/>
+<nav id="login">
+	<ul><br/><br/>
+            {% if not user.is_authenticated %}
+			<form method="POST" id="acesso"><br/><br/>
+				{% csrf_token %}
+                {{ form.as_p }}	
+                <input type="submit" onclick="validaCmp()" value="ACESSAR" id="botao"/>
+			</form>		
+			{% else %}
+				{%if user.perfil == 'A'%}
+					<a href="logado.html">ÁREA DO ALUNO</a><br/>
+				{%endif%}
+				{%if user.perfil == 'P'%}
+					<a href="logado.html">ÁREA DO PROFESSOR</a><br/>
+					<a href="{%url 'restrito'%}">RESTRITO</a><br/>
+				{%endif%}
+				{%if user.perfil == 'C'%}
+					<a href="logado.html">ÁREA DO COORDENADOR</a><br/>
+                {%endif%}
+                <a href="sair/">SAIR</a><br/>
+			{% endif %}
+			<br/><br/><br/>
+    </ul>
+</nav>
+
+{% block conteudo %}
+
+{% endblock %}
+<footer>
+<div>
+    <br/><br/>
+    <h1>ACESSO AO SITE</h1>
+    <a href="inscricao.html" id="link">SOLICITE SEU LOGIN</a>
+    <br/><br/>
+    <h1>SOBRE</h1>
+    <a href="index.html" id="link">A FACULDADE</a>
+    <br/><br/>
+    <h1>CURSOS</h1>
+    <a href="#" id="link">GRADUAÇÃO</a>
+    <a href="#" id="link">PÓS-GRADUAÇÃO</a>
+</div>
+</footer>
+</body>
+</html>
+

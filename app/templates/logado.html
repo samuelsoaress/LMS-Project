@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block conteudo %}
+
+{% if user.is_authenticated and user.perfil == 'A' %}   
+        <h1><br/>ÁREA DO ALUNO</h1><br/><hr/><br/>
+        <a href="#" style="margin: 0 300px">• &nbsp; ENTREGAS REALIZADAS E PENDENTES</a><br/>
+        <a href="#" style="margin: 0 300px">• &nbsp; ENTREGAS DENTRO DO PRAZO</a><br/>
+        <a href="#" style="margin: 0 300px">• &nbsp; ENTREGAS FORA DO PRAZO</a><br/>
+        <br/><br/><br/><br/>
+{% endif %}
+{% if user.is_authenticated and user.perfil == 'P' %}
+        <h1><br/>ÁREA DO PROFESSOR</h1><hr/><br/>
+        <a href="tarefas_entregues.html" style="margin: 0 300px">• &nbsp; RESUMO DAS TAREFAS ENTREGUES</a><br/>
+        <a href="questao_form.html" style="margin: 0 300px">• &nbsp; ADICIONAR DISCIPLINAS</a><br/>
+        <br/><br/><br/><br/>
+{% endif %}
+{%if user.is_authenticated and user.perfil == 'C' %}
+        <br/><br/><h1>ÁREA DO COORDENADOR</h1><hr/><br/>
+        <a href="admin/" style="margin: 0 300px" target="_blank">• &nbsp; ACESSAR O ADMINISTRADOR</a>
+        <br/><br/><br/><br/>
+{% endif %}
+{% if not user.is_authenticated %}
+        FAÇA LOGIN
+{% endif %}
+{% endblock %}

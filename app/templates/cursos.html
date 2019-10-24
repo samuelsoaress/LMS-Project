@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block conteudo %}
+{%load static%}
+<br/><br/>
+<h1>CURSOS DE GRADUAÇÃO</h1>
+<hr/>
+<br/><br/>
+   {% for cada in lista_cursos %}
+      {{ cada.nome }} 
+   {% endfor %}
+<br/><br/>
+<h1>CURSOS DE PÓS-GRADUAÇÃO</h1>
+<hr/>
+<br/><br/><br/>
+{% endblock %}

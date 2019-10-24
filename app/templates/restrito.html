@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block conteudo %}
+{%load static%}
+<br/><br/><br/>
+<h1>ÁREA RESTRITA</h1>
+<br/><br/>
+<div>
+	{% for questao in questoes  %}
+		<h2>{{ curso.nome }}</h2>
+	{% for questao in curso.questoes %}
+		{{ questao }} - <a href="{% url 'questao_form' sigla=curso.sigla questao_id=questao.id %}">Editar questão</a></li>
+	{% empty %}
+		<li>O curso de {{ curso }} não possui questões.</li>
+	{% endfor %}
+	<p class="acoes">
+		<a href="{% url 'questao_form' sigla=curso.sigla questao_id='' %}">Adicionar Questão</a>
+	</p>
+</div>
+<br/><br/><br/><br/>
+{% endfor %}
+{% endblock %}

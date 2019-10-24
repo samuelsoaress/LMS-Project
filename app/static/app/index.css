@@ -1,0 +1,79 @@
+@charset "UTF-8";
+body{
+	margin :0;
+}
+/*Formatação menu*/
+.logo {
+	width:16%;
+	margin-bottom:-15px;
+}
+.login{
+	margin-bottom:-8px;
+}
+
+nav.menu ul {
+	width: 100%;
+	list-style:none;
+	display:inline;
+	position:fixed;
+	top:-16px;
+	background-color:#0070af;
+	text-align: center;
+	
+}
+nav.menu li {
+	font-size:16px;
+	display:inline-block;
+	padding: 15px;
+	transition:0.5s;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+nav.menu a {
+	text-decoration:none;
+	color:white;
+}
+nav.menu li:hover{
+	background-color:#0c7dbd;
+}
+.mySlides {display:none;}
+
+#principal{
+	font-size:500%;
+	text-align:center;
+	border-bottom: 2px solid red ;
+	font-family: 'Gotham';
+}
+#principal2{
+	font-size:300%;
+	text-align:center;
+	border-bottom: 2px solid green ;
+	font-family: 'Gotham';
+}
+#card1 {
+	margin-left:55px;
+	width:20%;
+}
+
+#evento {
+	text-align:center;
+	
+}
+#baixo{
+	clear:both;
+    background-color:#dddddd;
+    font-size: 100%;
+    width: 105%;
+    margin-left: 0%;
+    margin-right: -10%;
+    margin-bottom: -7%;
+    margin-top: -2%;
+	display: flex;
+	justify-content: center;
+}
+
+#baixo div {
+	clear:both;
+	text-align: left;
+	margin-left:40px;
+	margin-right:60px;
+}

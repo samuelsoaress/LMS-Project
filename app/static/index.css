@@ -1,0 +1,50 @@
+@charset "UTF-8";
+body{
+	margin :0;
+}
+/*Formatação menu*/
+.logo {
+	width:16%;
+	margin-bottom:-15px;
+}
+
+#principal{
+	font-size:500%;
+	text-align:center;
+	border-bottom: 2px solid red ;
+	font-family: 'Gotham';
+}
+#principal2{
+	font-size:300%;
+	text-align:center;
+	border-bottom: 2px solid green ;
+	font-family: 'Gotham';
+}
+#card1 {
+	margin-left:55px;
+	width:20%;
+}
+
+#evento {
+	text-align:center;
+	
+}
+#baixo{
+	clear:both;
+    background-color:black;
+    font-size: 100%;
+    width: 105%;
+    margin-left: -10%;
+    margin-right: 30%;
+    margin-bottom: -10%;
+    margin-top: -2%;
+	display: flex;
+	justify-content: center;
+}
+
+#baixo div {
+	clear:both;
+	text-align: left;
+	margin-left:60px;
+	margin-right:70px;
+}
