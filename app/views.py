@@ -79,5 +79,9 @@ def questao_form(request, numero, questao_id=None):
         "form" : form,
         "curso" : Curso 
     }
-    return render(request,"questao_form.html",context)    
+    return render(request,"questao_form.html",context)
+
+def newQuestionForm(id,question):
+    turma = Turma.objects.get(question)
+    return Turma(form)
 
