@@ -1,6 +1,12 @@
-# Projeto-LMS
-Projeto do semestre - WEBsite Educacional
+## Projeto Learning Management System - Django 
+WEBsite Educacional - Desenvolvido com funcionalidades de um website institucional
+	crud
+	login - logout
+	insert activities
+	
 
-Desenvolvido em Front:HTML5,CSS3,Javascript,Bootstrap
-Backend:Python framework:Django
-Banco: SQL Server
+This is a Python web app built on the Django framework.
+
+## License
+
+veja [License](LICENCE).
