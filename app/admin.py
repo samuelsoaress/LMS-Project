@@ -36,7 +36,7 @@ class AlterarAlunoForm(forms.ModelForm):
         model = Aluno
         fields = ('nome', 'curso','email','celular')
 
-class AlterarProfessorForm(forms.ModelForm):
+class AlterarProfessor(forms.ModelForm):
     class Meta:
         model = Professor
         fields = ('nome','apelido','email','celular')
