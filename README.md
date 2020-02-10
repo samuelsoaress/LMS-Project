@@ -10,6 +10,3 @@ WEBsite Educacional - Desenvolvido com funcionalidades de um website institucion
 
 This is a Python web app built on the Django framework.
 
-## License
-
-veja [License](LICENCE).
